@@ -1,0 +1,23 @@
+# object-system
+
+Object Oriented System similar to Smalltalk for Clojure
+
+## Usage
+
+#Example
+
+(def Rectangle
+        (OBJECT :subclass
+            {:class 'Rectangle
+             :instance-variable-names [:width :height]
+             :area (fn [] (* (self :width) (self :height)))}))
+
+(let [rectangle (Rectangle :new {:width 20 :height 30})]
+      (rectangle :area))
+=> 600
+
+You can find more usages in a unit test file.
+
+## Installation
+
+## License
